@@ -2,6 +2,7 @@ require_relative 'game'
 require_relative 'result_printer'
 require_relative 'word_reader'
 
+# test comment
 puts "Игра виселица"
 
 printer = ResultPrinter.new
