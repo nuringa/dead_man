@@ -20,7 +20,7 @@ Ruby версии 1.9 или выше.
 ` bundle install `
 
 Запускаем игру в консоли: 
-` ruby main.rb `
+` bundle exec ruby main.rb `
 
 Вы так же можете поменять слова для игры в файле - words.txt
 ` ~/dead_man/data/words.txt `

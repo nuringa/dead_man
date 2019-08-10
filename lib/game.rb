@@ -1,3 +1,5 @@
+require "unicode_utils/upcase"
+
 class Game
   attr_reader :status, :errors, :letters, :good_letters, :bad_letters
   attr_accessor :version
@@ -15,7 +17,7 @@ class Game
   def get_letters(word)
     abort 'Нечего отгадывать. Проверьте файл' if word.nil?
     
-    word.encode('UTF-8').upcase.split('')
+    UnicodeUtils.upcase(word).split('')
   end
   
   def max_errors
@@ -66,7 +68,7 @@ class Game
   end
       
   def next_step(letter)
-    letter = letter.upcase
+    letter = UnicodeUtils.upcase(letter)
 
     return if @status == :lost || @status == :won
     return if repeated?(letter)
